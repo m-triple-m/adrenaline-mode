@@ -1,6 +1,7 @@
 {
   "name": "adrenaline-mode",
   "displayName": "adrenaline mode",
+  "icon": "./images/icon.jpg",
   "description": "want to go on adrenaline mode",
   "version": "0.0.1",
   "engines": {
@@ -8,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/m-triple-m/code-assist"},
+    "url": "https://github.com/m-triple-m/adrenaline-mode"},
   "categories": [
     "Other", "Snippets", "Programming Languages", "Formatters"
   ],
@@ -16,9 +17,42 @@
   "main": "./extension.js",
   "contributes": {
     "commands": [{
-      "command": "adrenaline-mode.helloWorld",
+      "command": "code-assist.helloWorld",
       "title": "Hello World"
-    }]
+    }, {
+      "command": "code-assist.createReactComponent",
+      "title": "Create a New React Component File"
+    }, {
+      "command": "code-assist.createImportReactComponent",
+      "title": "Create and Import a New React Component File"
+    }, {
+      "command": "code-assist.createReactComponentWithCSS",
+      "title": "Create a New React Component File with CSS"
+    }
+  ],
+  "menus": {
+      "explorer/context": [
+        {
+          "command": "code-assist.createReactComponent"
+        },
+        {
+          "command": "code-assist.createImportReactComponent"
+        },
+        {
+          "command": "code-assist.createReactComponentWithCSS"
+        }
+      ]
+    },
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/express-snippets.code-snippets"
+      }
+    ] 
   },
   "scripts": {
     "lint": "eslint .",
