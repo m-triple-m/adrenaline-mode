@@ -4,34 +4,42 @@
   "icon": "./images/icon.jpg",
   "publisher": "MohammadMubassir",
   "description": "want to go on adrenaline mode",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.76.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/m-triple-m/adrenaline-mode"},
+    "url": "https://github.com/m-triple-m/adrenaline-mode"
+  },
   "categories": [
-    "Other", "Snippets", "Programming Languages", "Formatters"
+    "Other",
+    "Snippets",
+    "Programming Languages",
+    "Formatters"
   ],
   "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "code-assist.helloWorld",
-      "title": "Hello World"
-    }, {
-      "command": "code-assist.createReactComponent",
-      "title": "Create a New React Component File"
-    }, {
-      "command": "code-assist.createImportReactComponent",
-      "title": "Create and Import a New React Component File"
-    }, {
-      "command": "code-assist.createReactComponentWithCSS",
-      "title": "Create a New React Component File with CSS"
-    }
-  ],
-  "menus": {
+    "commands": [
+      {
+        "command": "code-assist.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "code-assist.createReactComponent",
+        "title": "Create a New React Component File"
+      },
+      {
+        "command": "code-assist.createImportReactComponent",
+        "title": "Create and Import a New React Component File"
+      },
+      {
+        "command": "code-assist.createReactComponentWithCSS",
+        "title": "Create a New React Component File with CSS"
+      }
+    ],
+    "menus": {
       "explorer/context": [
         {
           "command": "code-assist.createReactComponent"
@@ -53,7 +61,7 @@
         "language": "javascript",
         "path": "./snippets/express-snippets.code-snippets"
       }
-    ] 
+    ]
   },
   "scripts": {
     "lint": "eslint .",
