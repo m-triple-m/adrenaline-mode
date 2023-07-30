@@ -1,7 +1,9 @@
 {
   // -------------- React Snippets ----------------
   "React Component": {
-    "prefix": ["dp-crc"],
+    "prefix": [
+      "dp-crc"
+    ],
     "body": [
       "import React from \"react\"",
       "",
@@ -18,7 +20,9 @@
     "description": "React Component"
   },
   "React Navbar Component - BootstrapCSS": {
-    "prefix": ["dp-cncbt"],
+    "prefix": [
+      "dp-cncbt"
+    ],
     "body": [
       "import React from \"react\";",
       "import { Link, NavLink } from \"react-router-dom\";",
@@ -93,7 +97,9 @@
     "description": "React Navbar Component - BootstrapCSS"
   },
   "React Footer Component - BootstrapCSS": {
-    "prefix": ["dp-cfcbt"],
+    "prefix": [
+      "dp-cfcbt"
+    ],
     "body": [
       "import React from \"react\";",
       "",
@@ -246,7 +252,9 @@
     "description": "React Navbar Component - BootstrapCSS"
   },
   "React Login Component - BootstrapCSS": {
-    "prefix": ["dp-clcbt"],
+    "prefix": [
+      "dp-clcbt"
+    ],
     "body": [
       "import React from \"react\";",
       "",
@@ -336,7 +344,9 @@
     "description": "React Navbar Component - BootstrapCSS"
   },
   "React Register Component - BootstrapCSS": {
-    "prefix": ["dp-crcbt"],
+    "prefix": [
+      "dp-crcbt"
+    ],
     "body": [
       "import React from \"react\";",
       "",
@@ -434,7 +444,9 @@
   },
   // React Native Snippets
   "React Native Component": {
-    "prefix": ["dp-crn"],
+    "prefix": [
+      "dp-crn"
+    ],
     "body": [
       "import React from \"react\";",
       "import { View, Text } from \"react-native\";",
@@ -450,5 +462,67 @@
       "export default ${1:ComponentName};"
     ],
     "description": "React Native Component"
-  }
+  },
+  // Express API Snippets
+  "Express Initialize Advance": {
+    "prefix": [
+      "express-init"
+    ],
+    "body": [
+      "const express = require('express');",
+      "",
+      "const app = express();",
+      "const port = ${1:5000};",
+      "",
+      "const ${2:UserRouter} = require('./routers/${3:userRouter}');",
+      "$4",
+      "",
+      "app.use(express.json());",
+      "",
+      "app.use('/${5:user}', ${2:UserRouter});",
+      "$6",
+      "",
+      "app.get('/', (req, res) => {",
+      "    res.send('express server working');",
+      "});",
+      "",
+      "app.listen(port,  () => {",
+      "    console.log('express server started successfully🚀');",
+      "});$0"
+    ],
+    "description": "Express index initiailize syntax - Mongoose"
+  },
+  "Mongoose Model": {
+    "prefix": [
+      "mdb-model"
+    ],
+    "body": [
+      "const { model, Schema } = require(\"../connection\");",
+      "",
+      "const ${1:mySchema} = new Schema({",
+      "  $2",
+      "});",
+      "",
+      "module.exports = model('$3', ${1:mySchema});$0",
+    ],
+    "description": "Mongoose Model Basic Syntax - Mongoose"
+  },
+  "Mongoose Model Advanced": {
+    "prefix": [
+      "mdb-model-advance"
+    ],
+    "body": [
+      "const { model, Schema, Types } = require(\"../connection\");",
+      "",
+      "const ${1:mySchema} = new Schema({",
+      "  ${2:field1}: {type : ${3:String} },",
+      "  ${4:field1}: {type : ${5:String} },",
+      "  ${6:field1}: {type : ${7:String} },",
+      "  ${10:createdAt}: {type : Date, default: Date.now },",
+      "});",
+      "",
+      "module.exports = model('$11', ${1:mySchema});$0",
+    ],
+    "description": "Mongoose Model Advance Syntax - Mongoose"
+  },
 }
